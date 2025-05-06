@@ -1,3 +1,6 @@
+###############################
+#####         Dia 3        ####
+###############################
 #factorial 
 num=(int (input ("ingrese el numero para sacarle factorial: ")))
 contador=1 
@@ -9,3 +12,5 @@ while contador <= num :
 
 
 print ("el factorial de ",num ,"es ",factorial )
+
+## Desarrolado por Alejandro Andres Sanchez Carrillo 
