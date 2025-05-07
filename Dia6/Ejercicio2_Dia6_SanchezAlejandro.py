@@ -1,4 +1,8 @@
 
+###############################
+#####         Dia 6      ####
+###############################
+#menu de operaciones filtro 
 num1=int (input("ingresa el primer numero "))
 num2=int (input("ingresa el segundo numero"))
           
@@ -25,4 +29,5 @@ if opc==3:
 if opc==4:
     resultado4=float (num1/num2 )
     print (resultado4)
-    
+
+## Desarrolado por Alejandro Andres Sanchez Carrillo

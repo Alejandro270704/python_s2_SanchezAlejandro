@@ -1,7 +1,7 @@
 ###############################
 #####         Dia 3        ####
 ###############################
-#area de un triangulo 
+#empresa con funciones 
 def calcularsueldobruto(horas,valorHora):
     return (horas * valorHora)
 def descuento(sueldobruto ):
@@ -53,3 +53,4 @@ print ("el que menos gana es ",nombreMenor,resultado2," pesos ")
 print (sueldoBrutoMenor)
 print(epsMenor)
 print(pensionMenor)
+    ## Desarrolado por Alejandro Andres Sanchez Carrillo 

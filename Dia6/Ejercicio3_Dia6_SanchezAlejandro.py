@@ -2,6 +2,7 @@
 ###############################
 #####         Dia 6      ####
 ###############################
+#menu de operaciones filtro con funciones 
 def resultado1(num1,num2 ):
     return( num1+num2 )
 

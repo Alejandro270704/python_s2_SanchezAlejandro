@@ -1,7 +1,13 @@
 ###############################
 #####         Dia 3        ####
 ###############################
-#menu de comida 
+#menu de comida con funciones 
+def calculoServicio(resultado):
+    return (resultado *0.04)
+
+def calculoTotal(resultado, calculoservicio):
+    return  (resultado+ servicio) 
+
 numH=(int (input ("ingrese el numero de hamburguesas que va a ordenar ")))
 resultado=0
 for i in range (numH):
@@ -72,12 +78,11 @@ for i in range (numH):
      resultado=resultado+8000
     elif opc==3:
      resultado=resultado+9000
-    
-    
-servicio=resultado*0.10
-total=servicio+resultado 
+
+servicio=(calculoServicio(resultado))
+total=(calculoTotal(resultado,servicio))
 print ("su subtotal es ",resultado)
-print ("el servicio es ",servicio)
-print ("su cuenta es ",total )
+print ("su servicio es ",servicio)
+print ("su totsl es",total)
 ## Desarrolado por Alejandro Andres Sanchez Carrillo 
 
