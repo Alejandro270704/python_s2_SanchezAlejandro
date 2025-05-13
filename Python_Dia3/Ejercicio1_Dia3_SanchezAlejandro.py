@@ -12,7 +12,7 @@ diccionarioRobusto={
     "apellido":"Gómez",
     "edad":25,
     "telefonos":[{"codigo":57,"numero":3023019865,"tipo":"trabajo"}
-                 ,{"codigo":1,"numero":3983054625,"tipo":"personal"}]
+                ,{"codigo":1,"numero":3983054625,"tipo":"personal"}]
 }
 diccionarioRobusto2={
     "id":2,
@@ -20,7 +20,7 @@ diccionarioRobusto2={
     "apellido":"Bejarano",
     "edad":27,
     "telefonos":[{"codigo":58,"numero":2323057565,"tipo":"trabajo"}
-                 ,{"codigo":22,"numero":6857493658,"tipo":"personal"}]
+                ,{"codigo":22,"numero":6857493658,"tipo":"personal"}]
 }
 listaRobusta=[]
 listaRobusta.append(diccionarioRobusto)
@@ -45,14 +45,15 @@ while(booleanito):
         print("#################")
         print("#### Crear Persona ####")
         print("#################")
+        numId=listaRobusta[len(listaRobusta)-1]["id"]+1
         diccionarioVacio={
-            "id":input ("escribe el id "),
+            "id":numId,
             "nombre":input("nombre "),
             "apellido":input("apellido "),
             "edad":int(input("edad ")),
-          
+            
             "telefonos":[{"codigo":int(input("codigo ")),"numero":int(input("numero telefonico ")),"tipo":input(" trabajo o personal ")},
-                  {"codigo":int(input("segundo codigo ")),"numero":int(input("numero telefonico dos ")),"tipo":input("trabajo o personal ")}]
+                    {"codigo":int(input("segundo codigo ")),"numero":int(input("numero telefonico dos ")),"tipo":input("trabajo o personal ")}]
             }
         listaRobusta.append(diccionarioVacio)
         
@@ -81,41 +82,42 @@ while(booleanito):
                     print("#### - Tipo: Es su número de Trabajo")
                 
                 print("---------------------------")
-               
-               
+            
     elif(opcionUsuario==3):
         print ("    ####   elegir a una persona  ####  ")
         for i in range (len(listaRobusta)):
             print("Nombre:",listaRobusta[i]["nombre"])
-        nombre_de_persona=input("escribe el nombre de la persona ")
+        for i in range (len(listaRobusta)):
+            print ("id:",listaRobusta[i]["id"])
+        nombre_de_persona=input("escribe el nombre de la persona o la id ")
         for persona in (listaRobusta):
-             if persona["nombre"].lower()==nombre_de_persona.lower():
+            if persona["nombre"].lower()==nombre_de_persona.lower() or (nombre_de_persona.isdigit() and persona["id"]== int(nombre_de_persona)):
                 print ("id",persona["id"])
                 print ("nombre",persona["nombre"])
                 print ("apellido",persona["apellido"])
                 print ("edad",persona["edad"])
                 
                 for q in range(len(listaRobusta[i]["telefonos"])):
-                 print("---------------------------")
-                 print("Telefono#",q+1,":")
-                 print("#### - Código:",listaRobusta[i]["telefonos"][q]["codigo"])
-                 print("#### - Numero:",listaRobusta[i]["telefonos"][q]["numero"])
+                    print("---------------------------")
+                    print("Telefono#",q+1,":")
+                    print("#### - Código:",listaRobusta[i]["telefonos"][q]["codigo"])
+                    print("#### - Numero:",listaRobusta[i]["telefonos"][q]["numero"])
                 if(listaRobusta[i]["telefonos"][q]["tipo"] == "personal"):
                     print("#### - Tipo: Es su número Personal")
                 else:
                     print("#### - Tipo: Es su número de Trabajo")
                     
     elif opcionUsuario==4 :          
-             print  ("        #### actualizar datos de una persona ####")        
-             for i in range (len(listaRobusta))  :
-              print ("nombre",listaRobusta[i]["nombre"])  
+            print  ("        #### actualizar datos de una persona ####")        
+            for i in range (len(listaRobusta))  :
+                print ("nombre",listaRobusta[i]["nombre"])  
     
     
     
-             actualizar=(input ("escribe el nombre de la persona que quieres actualizar "))
+            actualizar=(input ("escribe el nombre de la persona que quieres actualizar "))
             
-       
-             for persona in (listaRobusta):
+        
+            for persona in (listaRobusta):
                 if persona["nombre"].lower()==actualizar.lower():
                     print ("elige el campo que quieres cambiar ")
                     print ("1.   id ")
@@ -139,23 +141,23 @@ while(booleanito):
                         persona["edad"]=nuevaEdad
                     elif opcion ==5:
                         nuevoTelefono=[{"codigo":int(input("codigo ")),"numero":int(input("numero telefonico ")),"tipo":input(" trabajo o personal ")},
-                     {"codigo":int(input("segundo codigo ")),"numero":int(input("numero telefonico dos ")),"tipo":input("trabajo o personal ")}]
+                        {"codigo":int(input("segundo codigo ")),"numero":int(input("numero telefonico dos ")),"tipo":input("trabajo o personal ")}]
                         persona["telefonos"]=nuevoTelefono
     
     elif (opcionUsuario==5):
         print ("      ### eliminar a una persona ###")
         for persona in listaRobusta:
-         print("Nombre:", persona["nombre"])
+            print("Nombre:", persona["nombre"])
     
         nombreEliminar=input("escriba la persona que quiere eliminar: ")
-        personaEncontrada=None
+        
         for persona in listaRobusta:
-             if persona["nombre"].lower() == nombreEliminar.lower():
-                 listaRobusta.remove(persona)
-                 print("Persona eliminada ")
-                 
-             else :
-              print ("no se encontro la persona ")
+            if persona["nombre"].lower() == nombreEliminar.lower():
+                listaRobusta.remove(persona)
+                print("Persona eliminada ")
+                
+            else :
+                print ("no se encontro la persona ")
                 
         
         
@@ -165,8 +167,5 @@ while(booleanito):
         booleanito = False
     else:
         print("No es una opción válida")
-   
- 
-    
-    
-    
+
+#desarrollado por Alejandro Andres Sanchez Carrillo 
