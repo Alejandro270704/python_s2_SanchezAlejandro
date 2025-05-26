@@ -1,6 +1,6 @@
 # introduccion,
 - # descripción,
-este repositorio analiza y evidencia los algoritmos en pseint se desarrola logica de programacion atravez de este proyecto ,poniendo en practica los comados en pseint como funciones ,bucles ,ciclos ,variables ,condicionaless
+este repositorio analiza y evidencia los algoritmos en python se desarrola logica de programacion atravez de este proyecto ,poniendo en practica los comados en python como funciones ,bucles ,ciclos ,variables ,condicionaless
 
 # tabla de contenido
 [introduccion](#introduccion)
